@@ -1,11 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Virtual Print Service - Soluciones Profesionales de Impresión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-printer-fill me-2 fs-4"></i>
+                <span class="fw-bold">Virtual Print Services</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#request">Solicitar Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-section text-center py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-start mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-3">Servicios Profesionales de Impresión</h1>
+                    <p class="lead mb-4">Soluciones expertas para todas tus necesidades de impresión. Configuración de red, mantenimiento y servicios especializados disponibles.</p>
+                    <a href="#request" class="btn btn-primary btn-lg px-5 py-3">Solicitar Servicio Ahora</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-icon-container">
+                        <i class="bi bi-printer display-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-2 fw-bold">Nuestros Servicios</h2>
+            <p class="text-center text-muted mb-5">Soluciones completas para tu impresora</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card text-center p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-wifi fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Conexión de Red</h3>
+                        <p class="text-muted">Conecta tu impresora a la red sin problemas. Configuración WiFi, IP y solución de problemas de red.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-gear-fill fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Configuración de Impresora</h3>
+                        <p class="text-muted">Instalación y optimización completa. Instalación de drivers, ajuste de configuración y mejora de rendimiento.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-droplet-fill fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Limpieza de Cabezales</h3>
+                        <p class="text-muted">Servicio profesional de limpieza para restaurar la calidad de impresión. Eliminación de obstrucciones y flujo óptimo de tinta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Formulario -->
+    <section id="request" class="py-5 bg-light-bone">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-container p-4 p-md-5">
+                        <h2 class="text-center mb-2 fw-bold">Solicitar un Servicio</h2>
+                        <p class="text-center text-muted mb-4">Completa el formulario y nos pondremos en contacto contigo</p>
+                        
+                        <form id="serviceForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Teléfono *</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="614-123-4567" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="company" class="form-label">Empresa (Opcional)</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="col-12">
+                                    <label for="service" class="form-label">Servicio Requerido *</label>
+                                    <select class="form-select" id="service" required>
+                                        <option value="">Selecciona un servicio...</option>
+                                        <option value="Conexión de Red">Conexión de Red</option>
+                                        <option value="Configuración de Impresora">Configuración de Impresora</option>
+                                        <option value="Limpieza de Cabezales">Limpieza de Cabezales</option>
+                                        <option value="Múltiples Servicios">Múltiples Servicios</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="printerModel" class="form-label">Modelo de Impresora *</label>
+                                    <input type="text" class="form-control" id="printerModel" placeholder="ej., HP LaserJet Pro M404n" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Detalles Adicionales</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Describe tu problema o requerimientos..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label for="preferredDate" class="form-label">Fecha Preferida de Servicio</label>
+                                    <input type="date" class="form-control" id="preferredDate">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">
+                                        <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-2 fw-bold">Contáctanos</h2>
+                    <p class="lead text-muted mb-4">¿Tienes preguntas? Estamos aquí para ayudarte</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="contact-card p-4">
+                                <i class="bi bi-whatsapp fs-2 mb-2"></i>
+                                <p class="mb-0 fw-bold">WhatsApp</p>
+                                <p class="text-muted">614 167 4094</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-card p-4">
+                                <i class="bi bi-clock-fill fs-2 mb-2"></i>
+                                <p class="mb-0 fw-bold">Horario</p>
+                                <p class="text-muted">Lun-Dom: 8AM - 8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark-bone text-center">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2025 Virtual Print Service. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
